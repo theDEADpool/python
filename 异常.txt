@@ -1,0 +1,35 @@
+常见异常
+Exception			所有异常类的基类
+AttributeError		特性引用或赋值失败
+IOError			文件操作相关失败
+IndexError		使用序列中不存在的索引
+KeyError			使用映射中不存在的索引
+NameError		找不到变量
+SyntaxError		代码错误形式引发
+TypeError		操作或函数作用于错误类型对象
+ValueError		对象值不匹配对象类型
+ZeroDivisionError	除0或者对0求余
+
+1、捕捉多个异常
+try:
+xxxx
+except (NameError, TypeError):
+xxx
+
+2、打印异常
+try:
+xxx
+except (A, B) as error:
+print error
+
+3、如果想要捕捉所有的异常
+try:
+xxx
+except:
+xxx
+但是这种写法会把CTRL+C或者sys.exit也捕捉到。
+一般不会这么写，而是
+try:
+xxx
+except Exception as error:
+xxx
