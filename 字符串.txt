@@ -9,7 +9,7 @@ str.join(dst)==>'1+2+3+4+5'
 str.join(dst)会报错，要求dst的成员必须是字符串。
 dst='12345'
 str='abc'
-str.join(dst)==>‘1abc2abc3abc4abc5’
+str.join(dst)==>'1abc2abc3abc4abc5'
 
 2、split方法
 str.join(dst)
@@ -20,5 +20,5 @@ dst='+'
 str.split(dst)==>['', '1', '2', '3', '4', '']，返回的列表前后都有一个空的成员
 如果分隔符在字符串中不存在
 str='+1+2+3+4+'
-dst='+'
+dst='-'
 str.split(dst)==>['+1+2+3+4+']，还是会生成一个列表
